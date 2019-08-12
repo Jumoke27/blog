@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+<head>
+	<title>Book summary blog</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/bootstrap.min.css'%}">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+	<script type="text/javascript" src="{% static 'Js/jquery.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.4.7.0/css/font-awesome.min.css' %}">
+
+</head>
+
+<body>
+ <nav class="navbar navbar-default navbar-fixed-top" style="background-color: green;">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#clenvironnavbar">
+		<span class="sr-only" style="color: white;">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>	
+		</button>
+		<a class="navbar-brand" href="Bookers" style="color: yellow;">Bookers</a>
+		</div>
+		<div class="collapse navbar-collapse" id="clenvironnavbar">
+			<ul class="nav navbar-nav navbar-right" >
+<!-- 				<li><a class="active" href="Home.html" style="color: white;">Home</a></li>
+				<li><a href="Login.html" style="color: white;">Login</a></li>
+				<li><a href="Signup.html" style="color: white;">Sign up</a></li>
+				<li><a href="Profile.html" style="color: white;">Profile</a></li> -->
+				<li><a href="{%url 'about'%}" style="color: white;">About us</a></li>
+				<!-- <li><a href="Contactus.html" style="color: white;">Contact us</a></li> -->
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+
+<div class="row">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6" style="">
+	<h1 style="padding-top: 50px;"><a class='red' href="#">Book summaries</a></h1>
+	{% for post in posts %}
+		<!-- <h4>{{post.author}}</h4> -->
+		<h4 class="desk"><a href="{% url 'single_post' ppk=post.id %}">{{post.title}}</a>   date: {{post.published_date}}</h4>
+		<!-- <img src="{{post.image.url}}" alt="{{post.image.url}}"> -->
+		<!-- <h4>{{post.text}}</h4> -->
+	{% endfor %}
+	</div>
+	<div class="col-sm-3"></div>
+</div>
+
+<nav class="navbar navbar-inverse navbar-static-bottom">
+<div class="container-fluid">
+	<div class="row" style="height: 300px;">
+		<div class="col-sm-3">
+			<img class="img-responsive" src="{% static 'img/cleaning service.jpg' %}">
+		</div>
+		<div class="col-sm-3" style="color: white;">
+			<h3>OUR SERVICES</h3>
+			<h4>
+				<ul>
+					<li>Summarising books</li>
+					<li>Book sales</li>
+					<li>Copywriting</li>
+					<li>Beta reading</li>
+				</ul>
+			</h4>
+		</div>
+		<div class="col-sm-3" style="color: white;">
+			<h3>INQUIRIES</h3>
+			<h4>Email:bookersummary@gmail.com</h4>
+			<h4>call:+2348036261567</h4>
+		</div>
+		
+		<div class="col-sm-3">
+			<h3 style="color: white;">FOLLOW US</h3>
+			<h4><a href="#"><i class="fa fa-facebook-square fa-3x"></i>bookers</a></h4>
+			<h4><a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i>bookers</a></h4>
+			<h4><a href="#"><i class="fa fa-twitter fa-3x"></i>@bookers</a></h4>
+			<h4><a href="#"><i class="fa fa-google-plus fa-2x"></i>bookers</a></h4>
+		</div>
+	</div>
+	<div class="row" style="color: white;">
+		<h5>copyright-2019. All right reserved. Bookers for book summary
+		</h5>
+	</div>
+	
+</div>		
+</nav>
+
+
+</body>
+
+<script type="text/javascript" src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+</html>

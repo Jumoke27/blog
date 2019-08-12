@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Clenviron</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'Js/jquery.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'CSS/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: green;">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#clenvironnavbar">
+		<span class="sr-only" style="color: white;">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>	
+		</button>
+		<a class="navbar-brand" href="Clenviron" style="color: yellow;">Clenviron</a>
+		</div>
+		<div class="collapse navbar-collapse" id="clenvironnavbar">
+			<ul class="nav navbar-nav navbar-right" >
+				<li><a class="active" href="Home.html" style="color: white;">Home</a></li>
+				<li><a href="Login.html" style="color: white;">Login</a></li>
+				<li><a href="Signup.html" style="color: white;">Sign up</a></li>
+				<li><a href="Profile.html" style="color: white;">Profile</a></li>
+				<li><a href="Aboutus.html" style="color: white;">About us</a></li>
+				<li><a href="Contactus.html" style="color: white;">Contact us</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid">
+<div class="row">
+	<div style="position: relative; padding-left: 20px;">
+		<img class="img-responsive" src="{% static 'img/teamcleaners.jpg' %}">
+	</div>
+
+	<div style="position: absolute; top: 100px; margin-left: 30px; margin-right: 20px;">
+		<h1>ABOUT CLEVIRON</h1>
+		<h2><p>Clenviron is here to make people waste disposal hassle free and even get paid or get reward for their waste that can still be recycled. </p>
+		<p>We believe that littering waste can cause harm to lives and mismanagement of resources as this materials are not useless in the real sense but can be transformed into something reusable and tangible which can also earn us income. We therefore say "Recycling is Life".  </p>
+		</h2>
+	</div>
+</div>
+</div>
+
+<nav class="navbar navbar-inverse navbar-static-bottom">
+<div class="container-fluid">
+	<div class="row" style="height: 300px;">
+		<div class="col-sm-3">
+			<img class="img-responsive" src="{% static 'img/cleaning service.jpg' %}">
+		</div>
+		<div class="col-sm-3" style="color: white;">
+			<h3>OUR SERVICES</h3>
+			<h4>
+				<ul>
+					<li>Wastebin Disposal</li>
+					<li>Company cleaning</li>
+					<li>House Cleaning</li>
+					<li>Recycliing of dirts</li>
+				</ul>
+			</h4>
+		</div>
+		<div class="col-sm-3" style="color: white;">
+			<h3>INQUIRIES</h3>
+			<h4>Email:clenvironcleaning@gmail.com</h4>
+			<h4>call:+2348036261567</h4>
+		</div>
+		
+		<div class="col-sm-3">
+			<h3 style="color: white;">FOLLOW US</h3>
+			<h4><a href="#"><i class="fa fa-facebook-square fa-3x"></i>clenvironcleaning</a></h4>
+			<h4><a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i>clenvironcleaning</a></h4>
+			<h4><a href="#"><i class="fa fa-twitter fa-3x"></i>@clenvironcleaning</a></h4>
+			<h4><a href="#"><i class="fa fa-google-plus fa-2x"></i>clenvironcleaning</a></h4>
+		</div>
+	</div>
+	<div class="row" style="color: white;">
+		<h5>copyright-2019. All right reserved. Clenviron cleaning
+		</h5>
+	</div>
+	
+</div>		
+</nav>
+</body>
+
+<script type="text/javascript" src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+</html>
